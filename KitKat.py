@@ -10,7 +10,7 @@ import pywhatkit
 import pyjokes
 
 
-d1 = {'vibhor':'shukla.vibhor495@gmail.com', 'rahul sir': 'rahul15.mdgr@gmail.com','didi':'bs.bhavya2003@gmail.com','mummy':'rajeshwarishukla99121@gmail.com','daddy':'gyanendrashukla0200@gmail.com','vibhor shukla':'shukla.vibhor9938@gmail.com'}
+d1 = {} #name to email mapping
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -79,8 +79,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('shukla.vibhor495@gmail.com', 'vibhor!@#')
-    server.sendmail('shukla.vibhor495@gmail.com', to, content)
+    server.login("<sender's email>", '<password>')
+    server.sendmail("<sender's email>", to, content)
     server.close()
 
 if __name__ == '__main__':
